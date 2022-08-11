@@ -1,6 +1,7 @@
 const UsageOfServer = require('../models/usageOfServerModel');
 const catchAsync = require('./../utils/catchAsync');
 const amqp = require('amqplib/callback_api');
+const axios = require('axios');
 
 exports.predictResult = catchAsync(async (req, res, next) => {
   amqp.connect('amqp://localhost', (conError, connection) => {
@@ -29,4 +30,18 @@ exports.predictResult = catchAsync(async (req, res, next) => {
       );
     });
   });
+});
+
+exports.slack = catchAsync(async (req, res, next) => {
+  axios
+    .post(
+      'https://hooks.slack.com/services/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',
+      { text: `Name: ${req.body.name} Email: ${req.body.email}` }
+    )
+    .then(() => {
+      res.send('Form Submitted');
+    })
+    .catch(() => {
+      res.send('Form Fail');
+    });
 });

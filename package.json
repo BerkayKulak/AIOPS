@@ -7,6 +7,7 @@
     "start": "nodemon server.js",
     "startSender": "node sender.js",
     "startReceiver": "node receiver.js",
+    "startSlack": "node slack.js",
     "start:prod": "SET NODE_ENV=production nodemon server.js",
     "debug": "ndb server.js"
   },
@@ -14,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "amqplib": "^0.10.2",
+    "axios": "^0.27.2",
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.1",
     "express": "^4.16.4",

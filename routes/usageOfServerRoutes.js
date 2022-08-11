@@ -12,6 +12,7 @@ router
 
 router.route('/sphToPython').post(usageOfServerController.userIdAndSPH);
 router.route('/predict').get(receiverController.predictResult);
+router.route('/slack').post(receiverController.slack);
 
 router
   .route('/withUserId/:id')
