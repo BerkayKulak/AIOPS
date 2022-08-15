@@ -13,6 +13,7 @@ router
 router.route('/sphToPython').post(usageOfServerController.userIdAndSPH);
 router.route('/predict').get(receiverController.predictResult);
 router.route('/slack').post(receiverController.slack);
+router.route('/discord').post(receiverController.discord);
 
 router
   .route('/withUserId/:id')
