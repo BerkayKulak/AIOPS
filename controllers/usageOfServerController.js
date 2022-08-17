@@ -1,25 +1,26 @@
 const UsageOfServer = require('../models/usageOfServerModel');
 const catchAsync = require('./../utils/catchAsync');
 const amqp = require('amqplib/callback_api');
+const logger = require('../config/logger');
 
 exports.getAllUsageOfServer = catchAsync(async (req, res, next) => {
   const usageOfServerModel = await UsageOfServer.find(req.body);
 
-  amqp.connect('amqp://localhost', (conError, connection) => {
-    if (conError) {
-      throw conError;
-    }
-    connection.createChannel((channelError, channel) => {
-      if (channelError) {
-        throw channelError;
-      }
-      const QUEUE = 'codingtest6';
-      channel.assertQueue(QUEUE, { durable: false });
-      let object = { age: 16 };
-      channel.sendToQueue(QUEUE, Buffer.from(JSON.stringify(object)));
-      console.log('MESSAGE SEND ', QUEUE);
-    });
-  });
+  // amqp.connect('amqp://localhost', (conError, connection) => {
+  //   if (conError) {
+  //     throw conError;
+  //   }
+  //   connection.createChannel((channelError, channel) => {
+  //     if (channelError) {
+  //       throw channelError;
+  //     }
+  //     const QUEUE = 'codingtest6';
+  //     channel.assertQueue(QUEUE, { durable: false });
+  //     let object = { age: 16 };
+  //     channel.sendToQueue(QUEUE, Buffer.from(JSON.stringify(object)));
+  //     console.log('MESSAGE SEND ', QUEUE);
+  //   });
+  // });
 
   res.status(200).json({
     status: 'success',
@@ -28,6 +29,7 @@ exports.getAllUsageOfServer = catchAsync(async (req, res, next) => {
       usageOfServerModel,
     },
   });
+  logger.error('getAllUsageOfServer method has started');
 });
 
 exports.userIdAndSPH = catchAsync(async (req, res, next) => {
@@ -58,6 +60,7 @@ exports.userIdAndSPH = catchAsync(async (req, res, next) => {
       newObject,
     },
   });
+  logger.error('userIdAndSPH method has started');
 });
 
 exports.getAllUsageOfServerWithUserId = catchAsync(async (req, res, next) => {
@@ -91,6 +94,7 @@ exports.getAllUsageOfServerWithUserId = catchAsync(async (req, res, next) => {
       averageUOC,
     },
   });
+  logger.error('getAllUsageOfServerWithUserId method has started');
 });
 
 exports.createUsageOfServer = catchAsync(async (req, res, next) => {

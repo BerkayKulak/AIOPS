@@ -4,11 +4,11 @@ var usageOfServerSchema = new mongoose.Schema(
   {
     UserId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
+      ref: 'User',
     },
     SPH: {
       type: String,
-      //required: [true, 'a brand must have a name'],
+      required: [true, 'a usageOfServerSchema must have a SPH'],
     },
     UOM: {
       type: String,

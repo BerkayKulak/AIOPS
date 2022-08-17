@@ -32,7 +32,7 @@ exports.predictResult = catchAsync(async (req, res, next) => {
 exports.slack = catchAsync(async (req, res, next) => {
   axios
     .post(
-      'https://hooks.slack.com/services/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',
+      'https://hooks.slack.com/services/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',
       { text: `Name: ${req.body.name} Email: ${req.body.email}` }
     )
     .then(() => {
