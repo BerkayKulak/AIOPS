@@ -47,8 +47,8 @@ exports.userIdAndSPH = catchAsync(async (req, res, next) => {
       rl.question('Do you want to send pdf ? ', function (pdf) {
         newObject = {
           userId: '62f3575ab51f8a773cde8ed1',
-          SPH: submission,
-          IsPdfSend: pdf,
+          SPH: parseInt(submission),
+          IsPdfSend: parseInt(pdf),
         };
         amqp.connect('amqp://localhost', (conError, connection) => {
           if (conError) {
@@ -62,6 +62,7 @@ exports.userIdAndSPH = catchAsync(async (req, res, next) => {
             channel.assertQueue(QUEUE, { durable: false });
             channel.sendToQueue(QUEUE, Buffer.from(JSON.stringify(newObject)));
             console.log('MESSAGE SEND ', QUEUE);
+            console.log('MESSAGE OBJECT ', newObject);
           });
         });
 
