@@ -1,0 +1,26 @@
+-- LOGS
+Get-Content info.log -wait 
+
+-- NODE START 2.PowerShell
+npm run START
+
+-- POST METHOD 3.PowerShell
+1
+
+$choices = [System.Management.Automation.Host.ChoiceDescription[]] @("&Y","&N") 
+
+2
+
+$headers = @{
+ 'Content-Type'='application/json'
+ }
+
+3
+
+while ( $true ) {
+  Invoke-WebRequest -Method 'Post' -Uri 127.0.0.1:3000/api/v1/usageOfServer/sphToPython -Headers $headers -ContentType "application/json"
+  $choice = $Host.UI.PromptForChoice("Repeat the script?","",$choices,0)
+  if ( $choice -ne 0 ) {
+    break
+  }
+}
