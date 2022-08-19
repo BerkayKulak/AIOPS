@@ -8,7 +8,7 @@ var usageOfServerSchema = new mongoose.Schema(
     },
     SPH: {
       type: String,
-      required: [true, 'a usageOfServerSchema must have a SPH'],
+      //required: [true, 'a usageOfServerSchema must have a SPH'],
     },
     UOM: {
       type: String,

@@ -2,6 +2,7 @@ const UsageOfServer = require('../models/usageOfServerModel');
 const catchAsync = require('./../utils/catchAsync');
 const amqp = require('amqplib/callback_api');
 const logger = require('../config/logger');
+const readline = require('readline');
 
 exports.getAllUsageOfServer = catchAsync(async (req, res, next) => {
   const usageOfServerModel = await UsageOfServer.find(req.body);
@@ -33,34 +34,53 @@ exports.getAllUsageOfServer = catchAsync(async (req, res, next) => {
 });
 
 exports.userIdAndSPH = catchAsync(async (req, res, next) => {
-  const newObject = {
-    userId: '62f3575ab51f8a773cde8ed1',
-    SPH: req.body.SPH,
-    IsPdfSend: req.body.IsPdfSend,
-  };
+  var rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
 
-  amqp.connect('amqp://localhost', (conError, connection) => {
-    if (conError) {
-      throw conError;
+  var newObject;
+
+  rl.question(
+    'How many submissions would you like to send? ? ',
+    function (submission) {
+      rl.question('Do you want to send pdf ? ', function (pdf) {
+        newObject = {
+          userId: '62f3575ab51f8a773cde8ed1',
+          SPH: submission,
+          IsPdfSend: pdf,
+        };
+        amqp.connect('amqp://localhost', (conError, connection) => {
+          if (conError) {
+            throw conError;
+          }
+          connection.createChannel((channelError, channel) => {
+            if (channelError) {
+              throw channelError;
+            }
+            const QUEUE = 'SPHTOPYTHON';
+            channel.assertQueue(QUEUE, { durable: false });
+            channel.sendToQueue(QUEUE, Buffer.from(JSON.stringify(newObject)));
+            console.log('MESSAGE SEND ', QUEUE);
+          });
+        });
+
+        res.status(200).json({
+          status: 'success',
+          data: {
+            newObject,
+          },
+        });
+        logger.error('userIdAndSPH method has started');
+        rl.close();
+      });
     }
-    connection.createChannel((channelError, channel) => {
-      if (channelError) {
-        throw channelError;
-      }
-      const QUEUE = 'SPHTOPYTHON';
-      channel.assertQueue(QUEUE, { durable: false });
-      channel.sendToQueue(QUEUE, Buffer.from(JSON.stringify(newObject)));
-      console.log('MESSAGE SEND ', QUEUE);
-    });
-  });
+  );
 
-  res.status(200).json({
-    status: 'success',
-    data: {
-      newObject,
-    },
-  });
-  logger.error('userIdAndSPH method has started');
+  // rl.on('close', function () {
+  //   console.log('\nBYE BYE !!!');
+  //   process.exit(0);
+  // });
 });
 
 exports.getAllUsageOfServerWithUserId = catchAsync(async (req, res, next) => {
