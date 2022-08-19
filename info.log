@@ -1,0 +1,158 @@
+{"level":"info","message":"App running on port 3000...","timestamp":"2022-08-17T08:01:04.681Z"}
+{"level":"info","message":"App running on port 3000...","timestamp":"2022-08-17T08:01:17.738Z"}
+{"level":"info","message":"App running on port 3000...","timestamp":"2022-08-17T08:01:22.991Z"}
+{"level":"info","message":"App running on port 3000...","timestamp":"2022-08-17T08:02:40.263Z"}
+{"level":"info","message":"App running on port 3000...","timestamp":"2022-08-17T08:04:48.718Z"}
+{"level":"info","message":"App running on port 3000...","timestamp":"2022-08-17T09:27:18.361Z"}
+{"level":"info","message":"App running on port 3000...","timestamp":"2022-08-17T09:27:28.077Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-17T09:27:58.958Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-17T09:39:33.788Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-17T09:39:44.969Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-17T09:40:01.906Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-17T09:44:02.662Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-17T09:44:06.513Z"}
+{"level":"error","message":"getAllUsageOfServer method has started","timestamp":"2022-08-17T09:44:14.611Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-17T09:45:12.528Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-17T09:51:11.823Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-17T09:52:08.822Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-17T09:52:14.530Z"}
+{"level":"error","message":"UsageOfServer validation failed: SPH: a usageOfServerSchema must have a SPH","timestamp":"2022-08-17T09:52:19.185Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-17T09:54:03.474Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-17T09:55:22.657Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-17T10:23:03.275Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-17T14:47:49.837Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-17T14:47:54.640Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-17T14:48:32.004Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-17T14:48:53.787Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-17T14:49:05.159Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-17T14:49:11.223Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-17T14:49:21.305Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-17T14:51:25.892Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T08:27:24.899Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T08:27:52.296Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T08:54:12.825Z"}
+{"level":"error","message":"getAllUsageOfServer method has started","timestamp":"2022-08-19T08:55:57.413Z"}
+{"level":"error","message":"getAllUsageOfServer method has started","timestamp":"2022-08-19T08:59:09.669Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T08:59:46.515Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T09:08:34.779Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T09:10:04.729Z"}
+{"level":"error","message":"Unexpected token ' in JSON at position 2","timestamp":"2022-08-19T09:10:06.831Z"}
+{"level":"error","message":"Unexpected token ' in JSON at position 2","timestamp":"2022-08-19T09:10:25.453Z"}
+{"level":"error","message":"Unexpected token ' in JSON at position 2","timestamp":"2022-08-19T09:10:33.860Z"}
+{"level":"error","message":"Unexpected token S in JSON at position 0","timestamp":"2022-08-19T09:14:59.122Z"}
+{"level":"error","message":"Unexpected token S in JSON at position 0","timestamp":"2022-08-19T09:15:16.829Z"}
+{"level":"error","message":"Unexpected token S in JSON at position 0","timestamp":"2022-08-19T09:16:27.462Z"}
+{"level":"error","message":"Unexpected token ' in JSON at position 2","timestamp":"2022-08-19T09:16:28.313Z"}
+{"level":"error","message":"Unexpected token ' in JSON at position 1","timestamp":"2022-08-19T09:16:47.049Z"}
+{"level":"error","message":"Unexpected token ' in JSON at position 1","timestamp":"2022-08-19T09:17:07.970Z"}
+{"level":"error","message":"Unexpected token ' in JSON at position 1","timestamp":"2022-08-19T09:17:37.101Z"}
+{"level":"error","message":"Unexpected token ' in JSON at position 1","timestamp":"2022-08-19T09:18:07.782Z"}
+{"level":"error","message":"Unexpected token ' in JSON at position 1","timestamp":"2022-08-19T09:18:08.287Z"}
+{"level":"error","message":"Unexpected token ' in JSON at position 1","timestamp":"2022-08-19T09:26:06.465Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T09:29:00.465Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T09:30:07.656Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T09:30:39.173Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T09:30:55.269Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T09:30:58.348Z"}
+{"level":"error","message":"Unexpected token ' in JSON at position 2","timestamp":"2022-08-19T09:31:47.766Z"}
+{"level":"error","message":"Unexpected token ' in JSON at position 2","timestamp":"2022-08-19T09:32:01.719Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T09:37:32.280Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T09:39:32.337Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T09:39:56.816Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T09:40:06.317Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T09:41:37.022Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T09:45:33.777Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T09:45:52.874Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T10:16:40.577Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T10:17:35.705Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T10:17:42.427Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T10:17:55.842Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T10:18:31.806Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T10:26:25.109Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T10:26:30.349Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T10:26:36.974Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T10:26:40.989Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T10:26:43.484Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T10:33:14.780Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T10:33:16.755Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T10:36:57.730Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T10:36:59.009Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T10:37:00.505Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T10:37:01.673Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T10:37:35.995Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T10:37:45.209Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T10:39:21.689Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T10:48:48.744Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T10:48:51.238Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T10:49:01.423Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T10:49:40.186Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T10:52:23.793Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T10:53:31.517Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T10:54:18.707Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T10:54:21.366Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T10:55:28.205Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T10:56:17.049Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T10:56:37.380Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T10:57:35.543Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T10:58:42.998Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T10:59:19.348Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:00:42.774Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:01:24.800Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:03:00.704Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:03:19.043Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:05:28.079Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:08:07.617Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:08:38.229Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:11:25.117Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:22:04.066Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:22:14.237Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:22:58.018Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:23:20.890Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:30:52.143Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:30:58.675Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:31:22.395Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:33:00.661Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:33:45.336Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:33:59.646Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:34:09.582Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:34:16.544Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:34:41.255Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:34:46.472Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:35:03.226Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:35:28.159Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:35:48.040Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:36:04.976Z"}
+{"level":"error","message":"rl is not defined","timestamp":"2022-08-19T11:36:07.894Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:36:13.451Z"}
+{"level":"error","message":"rl is not defined","timestamp":"2022-08-19T11:36:15.967Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:36:32.056Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:36:54.503Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:36:58.369Z"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'question')","timestamp":"2022-08-19T11:37:02.459Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:37:14.837Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:37:26.342Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:38:29.466Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:38:37.537Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:39:03.413Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:39:09.118Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:40:05.371Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:40:10.320Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:40:19.790Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:40:27.713Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:40:40.045Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:40:47.050Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:40:55.186Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:41:01.809Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:42:10.873Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:44:34.680Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:45:14.320Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:54:32.623Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:54:51.078Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:55:01.640Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:55:10.094Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:56:15.917Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:56:41.582Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:57:29.720Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:57:37.125Z"}
+{"level":"error","message":"userIdAndSPH method has started","timestamp":"2022-08-19T11:58:02.492Z"}
+{"level":"error","message":"App running on port 3000...","timestamp":"2022-08-19T11:59:51.054Z"}

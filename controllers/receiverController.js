@@ -5,44 +5,41 @@ const axios = require('axios');
 const { EmbedBuilder, WebhookClient } = require('discord.js');
 
 exports.predictResult = catchAsync(async (req, res, next) => {
+  var message;
   amqp.connect('amqp://localhost', (conError, connection) => {
     if (conError) {
       throw conError;
     }
-    connection.createChannel((channelError, channel) => {
-      if (channelError) {
-        throw channelError;
-      }
-      const QUEUE = 'SPHTOPYTHON';
-      channel.assertQueue(QUEUE, { durable: false });
-      channel.consume(
-        QUEUE,
-        (msg) => {
-          console.log(`Message received: ${JSON.stringify(msg.content)}`);
-          var message = JSON.parse(msg.content);
-          res.status(200).json({
-            status: 'success',
-            data: {
-              message,
-            },
-          });
-        },
-        { noAck: true }
-      );
-    });
+    connection.createChannel(
+      (channelError, channel) => {
+        if (channelError) {
+          throw channelError;
+        }
+        const QUEUE = 'hello11';
+        channel.assertQueue(QUEUE, { durable: false });
+        console.log('assert queue');
+        channel.consume(QUEUE, (msg) => {
+          // console.log(`Message received: ${msg.content}`);
+          message = JSON.parse(msg.content);
+          console.log(message);
+        });
+      },
+      { noAck: true }
+    );
   });
 });
 
 exports.slack = catchAsync(async (req, res, next) => {
   axios
     .post(
-      'https://hooks.slack.com/services/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',
+      'https://hooks.slack.com/services/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',
       { text: `Name: ${req.body.name} Email: ${req.body.email}` }
     )
     .then(() => {
       res.send('Form Submitted');
     })
-    .catch(() => {
+    .catch((error) => {
+      console.log(error);
       res.send('Form Fail');
     });
 });

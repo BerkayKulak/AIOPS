@@ -1,7 +1,9 @@
 const AppError = require('./../utils/appError');
+const logger = require('../config/logger');
 
 const handleCastErrorDB = (err) => {
   const message = `Invalid ${err.path}: ${err.value}.`;
+  logger.error(message);
   return new AppError(message, 400);
 };
 
@@ -10,6 +12,7 @@ const handleDuplicateFieldsDB = (err) => {
   console.log(value);
 
   const message = `Duplicate field value: ${value}. Please use another value!`;
+  logger.error(message);
   return new AppError(message, 400);
 };
 
@@ -17,6 +20,7 @@ const handleValidationErrorDB = (err) => {
   const errors = Object.values(err.errors).map((el) => el.message);
 
   const message = `Invalid input data. ${errors.join('. ')}`;
+  logger.error(message);
   return new AppError(message, 400);
 };
 
@@ -33,6 +37,7 @@ const sendErrorDev = (err, res) => {
     message: err.message,
     stack: err.stack,
   });
+  logger.error(err.message);
 };
 
 const sendErrorProd = (err, res) => {
@@ -41,12 +46,14 @@ const sendErrorProd = (err, res) => {
       status: err.status,
       message: err.message,
     });
+    logger.error(err.message);
   } else {
     console.error('ERROR 💥', err);
     res.status(500).json({
       status: 'error',
       message: 'Something went wrong!',
     });
+    logger.error(err.message);
   }
 };
 
