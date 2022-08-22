@@ -3,6 +3,10 @@ const catchAsync = require('./../utils/catchAsync');
 const amqp = require('amqplib/callback_api');
 const logger = require('../config/logger');
 const readline = require('readline');
+const { EmbedBuilder, WebhookClient } = require('discord.js');
+const axios = require('axios');
+const { parse } = require('csv-parse');
+var fs = require('fs');
 
 exports.getAllUsageOfServer = catchAsync(async (req, res, next) => {
   const usageOfServerModel = await UsageOfServer.find(req.body);
@@ -50,6 +54,7 @@ exports.userIdAndSPH = catchAsync(async (req, res, next) => {
           SPH: parseInt(submission),
           IsPdfSend: parseInt(pdf),
         };
+        var averageSPH;
         amqp.connect('amqp://localhost', (conError, connection) => {
           if (conError) {
             throw conError;
@@ -58,11 +63,113 @@ exports.userIdAndSPH = catchAsync(async (req, res, next) => {
             if (channelError) {
               throw channelError;
             }
-            const QUEUE = 'SPHTOPYTHON';
-            channel.assertQueue(QUEUE, { durable: false });
-            channel.sendToQueue(QUEUE, Buffer.from(JSON.stringify(newObject)));
-            console.log('MESSAGE SEND ', QUEUE);
-            console.log('MESSAGE OBJECT ', newObject);
+
+            function average(a, n) {
+              var sum = 0;
+              for (var i = 0; i < n; i++) sum += a[i];
+
+              return parseFloat(sum / n);
+            }
+
+            var arrayAverage = [];
+            var arrayAverageInt = [];
+            var parser = parse({ columns: true }, function (err, records) {
+              //console.log(records);
+              records.map((e) => {
+                arrayAverage.push(e.SPH);
+              });
+              for (var i = 0; i < records.length; i++) {
+                arrayAverageInt.push(parseInt(arrayAverage[i]));
+              }
+
+              var n = arrayAverageInt.length;
+              averageSPH = average(arrayAverageInt, n);
+
+              // TODO: PAYMENT SYSTEM INTEGRATE
+              if (averageSPH > 120 && averageSPH < 180) {
+                newObject.paymentSystem = 'Bronze';
+              } else if (averageSPH > 180 && averageSPH < 250) {
+                newObject.paymentSystem = 'Silver';
+              } else if (averageSPH > 250 && averageSPH < 500) {
+                newObject.paymentSystem = 'Gold';
+              } else {
+                newObject.paymentSystem = 'Diamond';
+              }
+
+              console.log(newObject);
+
+              const QUEUE = 'SPHTOPYTHON';
+              channel.assertQueue(QUEUE, { durable: false });
+              channel.sendToQueue(
+                QUEUE,
+                Buffer.from(JSON.stringify(newObject))
+              );
+              console.log('MESSAGE SEND ', QUEUE);
+              console.log('MESSAGE OBJECT ', newObject);
+
+              const webhookClient = new WebhookClient({
+                id: '1007544639454187551',
+                token:
+                  'rMNg7G566d_6UXG4TXclDegvv7jsI92JToPREkfVnU31xxh1ShLQjkS5e6Qd_UZqTwRI',
+              });
+
+              const embed = new EmbedBuilder()
+                .setColor(0x0099ff)
+                .setTitle(`${averageSPH}`)
+                .setURL('https://discord.js.org/')
+                .setAuthor({
+                  name: 'Some name',
+                  iconURL:
+                    'https://ps.w.org/embed-form/assets/icon-256x256.png?rev=2612516',
+                  url: 'https://discord.js.org',
+                })
+                .setDescription('Some description here')
+                .setThumbnail(
+                  'https://ps.w.org/embed-form/assets/icon-256x256.png?rev=2612516'
+                )
+                .addFields(
+                  { name: 'Regular field title', value: 'Some value here' },
+                  { name: '\u200B', value: '\u200B' },
+                  {
+                    name: 'Inline field title',
+                    value: 'Some value here',
+                    inline: true,
+                  },
+                  {
+                    name: 'Inline field title',
+                    value: 'Some value here',
+                    inline: true,
+                  }
+                )
+                .addFields({
+                  name: 'Inline field title',
+                  value: 'Some value here',
+                  inline: true,
+                })
+                .setImage(
+                  'https://orangematter.solarwinds.com/wp-content/uploads/2022/03/DevOps-lifecycle-capabilities-1024x621.png'
+                )
+                .setTimestamp()
+                .setFooter({
+                  text: 'Some footer text here',
+                  iconURL:
+                    'https://ps.w.org/embed-form/assets/icon-256x256.png?rev=2612516',
+                });
+
+              webhookClient.send({
+                content: 'Server has been started',
+                username: 'AIOPS',
+                avatarURL:
+                  'https://ps.w.org/embed-form/assets/icon-256x256.png?rev=2612516',
+                embeds: [embed],
+              });
+              axios.post(
+                'https://hooks.slack.com/services/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',
+                { text: `: ${JSON.stringify(newObject)}` }
+              );
+            });
+
+            fs.createReadStream(__dirname + '/UsageOfServers.csv').pipe(parser);
           });
         });
 
