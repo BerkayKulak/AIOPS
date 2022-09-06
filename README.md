@@ -164,9 +164,9 @@ DATABASE_PASSWORD=[DATABASE PASSWORD]
 <!-- ROADMAP -->
 ## Bug / Feature Request
 
-If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/BerkayKulak/Blogesque/issues/new) by including your search query and the expected result.
+If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/BerkayKulak/AIOPS/issues/new) by including your search query and the expected result.
 
-If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/BerkayKulak/Blogesque/issues/new). Please include sample queries and their corresponding results.
+If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/BerkayKulak/AIOPS/issues/new). Please include sample queries and their corresponding results.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
