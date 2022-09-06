@@ -71,8 +71,9 @@ to develop systems that determine which server to use according to the amount of
    ```sh
    https://github.com/BerkayKulak/AIOPS.git
    ```
-2. Update npm packages
+2. Update and Download npm packages
    ```sh
+   npm install
    npm update [-g] [<pkg>...]
    ```
 3. Add MySQL connection
@@ -84,6 +85,11 @@ to develop systems that determine which server to use according to the amount of
    ```js
    pip download <packagename> <options>
    ```
+5. RabbitMQ docker
+   ```js
+   docker pull rabbitmq
+   docker run -d --hostname my-rabbit --name some-rabbit rabbitmq:3
+   ```
    
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -94,13 +100,40 @@ to develop systems that determine which server to use according to the amount of
 ## Usage
 
 
-```bash
-# Go into the Blogesque.Mvc
-$ cd \Blogesque\Blogesque.Mvc
+```bash - 1
+# Go into the AiOpsBackend
+$ cd \AiOpsBackend
 
 # Run the app
-$ dotnet run
-$ dotnet run --project ./projects/proj1/proj1.csproj
+$ npm run start
+
+```
+
+```bash - 2
+# Go into the AiOps
+$ cd \AiOps
+
+# scripts
+$ choices = [System.Management.Automation.Host.ChoiceDescription[]] @("&Y","&N") 
+$ headers = @{
+ 'Content-Type'='application/json'
+ }
+$ while ( $true ) {
+  Invoke-WebRequest -Method 'Post' -Uri 127.0.0.1:3000/api/v1/usageOfServer/sphToPython -Headers $headers -ContentType "application/json"
+  $choice = $Host.UI.PromptForChoice("Repeat the script?","",$choices,0)
+  if ( $choice -ne 0 ) {
+    break
+  }
+} 
+
+```
+
+```bash - 3
+# Go into the AiOpsBackend
+$ cd \AiOpsBackend
+
+# Run the live logs
+$ Get-Content info.log -wait 
 
 ```
 
