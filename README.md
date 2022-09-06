@@ -201,7 +201,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- CONTACT -->
 ## Contact
-
+Hasan Ayberk Aydemir - (https://www.linkedin.com/in/aydemirayberk/) - ayberkaydemir8901@gmail.com
 Berkay Kulak - (https://www.linkedin.com/in/berkay-kulak-3442311b1/) - kulakberkay15@gmail.com
 
 Project Link:   (https://github.com/BerkayKulak/AIOPS)
