@@ -46,7 +46,11 @@ to develop systems that determine which server to use according to the amount of
 - Multi Threading
 - JWT Token
 - Typer
-- Sklearn
+- Matplotlib
+- Numpy
+- Pandas
+- Seaborn
+- Sklearn linear model Linear Regression 
 - Rich Table
 - CSV Files
 - Slack Integration
