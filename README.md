@@ -29,7 +29,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<img width="100%" src="https://user-images.githubusercontent.com/61355143/154842845-0b490a1b-65b2-4252-8b29-80187b0f935e.gif">
+<img width="100%" src="https://user-images.githubusercontent.com/61355143/188564647-65333a60-b79f-4ab9-8212-16c08254336b.png">
 
 
 to develop systems that determine which server to use according to the amount of submissions made. to convince customers of this on the corporate side and to advance the project.
