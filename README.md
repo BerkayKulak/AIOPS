@@ -153,8 +153,12 @@ PORT=3000
 DATABASE = [DATABASE ADDRESS]
 DATABASE_LOCAL=[LOCAL DATABASE]
 DATABASE_PASSWORD=[DATABASE PASSWORD]
+SLACK=[SLACK_URL]
+DISCORD_TOKEN=[DISCORD_TOKEN]
+DISCORD_ID=[DISCORD ID]
 
-
+https://api.slack.com/
+https://discord.js.org/#/
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
