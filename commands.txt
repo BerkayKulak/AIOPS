@@ -2,7 +2,7 @@
 Get-Content info.log -wait 
 
 -- NODE START 2.PowerShell
-npm run START
+npm run start
 
 -- POST METHOD 3.PowerShell
 1
