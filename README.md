@@ -135,9 +135,27 @@ $ Get-Content info.log -wait
 
 
 
+```bash - 4
+# Go into the AiOps
+$ cd \AiOps
+
+# Run the prediction
+$ python aiops.py prediction
+
+
 ```
 
+<!-- USAGE EXAMPLES -->
+## Config
+```
+NODE_ENV=development
+PORT=3000
+DATABASE = mongodb+srv://kulakberkay16:<PASSWORD>@cluster0.aa7xz.mongodb.net/AiOpsDb?retryWrites=true&w=majority
+DATABASE_LOCAL=mongodb://localhost:27017/AiOpsDb
+DATABASE_PASSWORD=UlyiKPN0TfF4jXts
 
+
+```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
