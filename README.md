@@ -107,7 +107,6 @@ $ cd \AiOpsBackend
 # Run the app
 $ npm run start
 
-```
 
 ```bash - 2
 # Go into the AiOps
@@ -126,7 +125,6 @@ $ while ( $true ) {
   }
 } 
 
-```
 
 ```bash - 3
 # Go into the AiOpsBackend
@@ -135,7 +133,11 @@ $ cd \AiOpsBackend
 # Run the live logs
 $ Get-Content info.log -wait 
 
+
+
 ```
+
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
