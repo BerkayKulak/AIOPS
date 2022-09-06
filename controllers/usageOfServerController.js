@@ -122,9 +122,8 @@ exports.userIdAndSPH = catchAsync(async (req, res, next) => {
               console.log('MESSAGE OBJECT ', newObject);
 
               const webhookClient = new WebhookClient({
-                id: '1007544639454187551',
-                token:
-                  'rMNg7G566d_6UXG4TXclDegvv7jsI92JToPREkfVnU31xxh1ShLQjkS5e6Qd_UZqTwRI',
+                id: process.env.DISCORD_ID,
+                token: process.env.DISCORD_TOKEN,
               });
 
               const embed = new EmbedBuilder()
@@ -159,10 +158,9 @@ exports.userIdAndSPH = catchAsync(async (req, res, next) => {
                   'https://ps.w.org/embed-form/assets/icon-256x256.png?rev=2612516',
                 embeds: [embed],
               });
-              axios.post(
-                'https://hooks.slack.com/services/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',
-                { text: `: ${JSON.stringify(newObject)}` }
-              );
+              axios.post(process.env.SLACK, {
+                text: `: ${JSON.stringify(newObject)}`,
+              });
             });
 
             fs.createReadStream(__dirname + '/UsageOfServers.csv').pipe(parser);
