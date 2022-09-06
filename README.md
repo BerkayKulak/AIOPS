@@ -150,9 +150,9 @@ $ python aiops.py prediction
 ```
 NODE_ENV=development
 PORT=3000
-DATABASE = mongodb+srv://kulakberkay16:<PASSWORD>@cluster0.aa7xz.mongodb.net/AiOpsDb?retryWrites=true&w=majority
-DATABASE_LOCAL=mongodb://localhost:27017/AiOpsDb
-DATABASE_PASSWORD=UlyiKPN0TfF4jXts
+DATABASE = [DATABASE ADDRESS]
+DATABASE_LOCAL=[LOCAL DATABASE]
+DATABASE_PASSWORD=[DATABASE PASSWORD]
 
 
 ```
