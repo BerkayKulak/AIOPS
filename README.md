@@ -69,20 +69,22 @@ to develop systems that determine which server to use according to the amount of
 
 1. Clone the repo
    ```sh
-   https://github.com/BerkayKulak/Blogesque.git
+   https://github.com/BerkayKulak/AIOPS.git
    ```
-2. Update Nuget packages
+2. Update npm packages
    ```sh
-   dotnet tool update <PACKAGE_ID> -g|--global
+   npm update [-g] [<pkg>...]
    ```
-3. Add Migration
+3. Add MySQL connection
    ```js
-   dotnet ef migrations add InitialCreate
+   hostname:127.0.0.1
+   port:3306
    ```
-4. Update Database
+4. Add Python packages
    ```js
-   dotnet ef database update
+   pip download <packagename> <options>
    ```
+   
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
